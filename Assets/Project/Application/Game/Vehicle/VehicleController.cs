@@ -80,12 +80,10 @@ namespace Project.Application.Game.Vehicle
                     _tempGroundedProperty = value;
                     if (_tempGroundedProperty)
                     {
-                        Debug.Log("Grounded");
                         _vehicle.VehicleEvents.OnGrounded.Invoke();
                     }
                     else
                     {
-                        Debug.Log("Take off");
                         _vehicle.VehicleEvents.OnTakeOff.Invoke();
                     }
                 }

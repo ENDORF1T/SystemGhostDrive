@@ -21,7 +21,7 @@ namespace Project.Application.Game.Vehicle
         [field: Header("Events"), Space(10)]
         [field: SerializeField] public VehicleEvents VehicleEvents { get; private set; } = new VehicleEvents();
 
-        private void OnEnable()
+        protected virtual void OnEnable()
         {
             Input = GetComponent<VehicleInput>();
             Controller = GetComponent<VehicleController>();

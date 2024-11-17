@@ -10,7 +10,7 @@ namespace Project.Application.Game.Vehicle
 
         private Vehicle _vehicle = null;
 
-        protected void SetInput(float acceleration, float steer, float brake)
+        public void SetInput(float acceleration, float steer, float brake)
         {
             if (!_vehicle) return; 
 
