@@ -2,6 +2,9 @@ using UnityEngine;
 
 namespace Project.Application.Game.Vehicle
 {
+    /// <summary>
+    /// Класс позволяющий управлять автомобилем
+    /// </summary>
     public class VehicleInput : MonoBehaviour
     {
         public float Steer { get; private set; } 
@@ -10,6 +13,12 @@ namespace Project.Application.Game.Vehicle
 
         private Vehicle _vehicle = null;
 
+        /// <summary>
+        /// Ввод данных для управления
+        /// </summary>
+        /// <param name="acceleration">Движение вперед и назад</param>
+        /// <param name="steer">Поворот вправо или влево</param>
+        /// <param name="brake">Использование тормоза</param>
         public void SetInput(float acceleration, float steer, float brake)
         {
             if (!_vehicle) return; 
@@ -34,13 +43,10 @@ namespace Project.Application.Game.Vehicle
             }
         }
 
+        /// <summary>
+        /// Метод для инициализации данных в Awake
+        /// </summary>
         protected virtual void Initialize() { } 
-
-        private void Update()
-        {
-            //SetInput(Input.GetAxis("Vertical"), Input.GetAxis("Horizontal"), Input.GetAxis("Jump"));
-            //SetInput(0.5f, Input.GetAxis("Horizontal"), Input.GetAxis("Jump"));
-        }
 
         private void Awake()
         {

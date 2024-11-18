@@ -2,6 +2,9 @@ using UnityEngine;
 
 namespace Project.Application.Game.Lap.Triggers
 {
+    /// <summary>
+    ///  ласс проверки на реверсивное движение игрока
+    /// </summary>
     public class LapReverseMoving : LapTriggerEnter
     {
         [SerializeField] private LapIncreaser _lapIncreaser = null;

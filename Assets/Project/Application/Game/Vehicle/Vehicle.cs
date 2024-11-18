@@ -2,6 +2,9 @@ using UnityEngine;
 
 namespace Project.Application.Game.Vehicle
 {
+    /// <summary>
+    /// Класс содержащий основные компоненты, свойства, переменные и другое
+    /// </summary>
     [RequireComponent(typeof(VehicleController))]
     [RequireComponent(typeof(VehicleInput))]
     public class Vehicle : MonoBehaviour

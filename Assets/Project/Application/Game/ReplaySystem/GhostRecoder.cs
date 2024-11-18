@@ -18,6 +18,7 @@ namespace Project.Application.Game.RepleySystem
 
         private void Update()
         {
+            // Запись данных, когда Recording = true
             if (Recording) _data.Enqueue(new RepleyData(Player.gameObject.transform.position, Player.gameObject.transform.rotation, Player.HandlerInputSystem.Movement, Player.HandlerInputSystem.IsBrake));
         }
     }
